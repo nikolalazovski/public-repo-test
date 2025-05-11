@@ -86,6 +86,9 @@
       <div style="border-bottom: 1px solid #888; text-align:center; color:#888; margin-bottom: 8px; font-weight: 500; letter-spacing: 1px; font-size: 1.1rem;">
         Calculator served from node: <br/> 
         <?php echo shell_exec('hostname -f'); ?>
+        <br/>
+        Availability Zone: <br/>
+        <?php echo shell_exec('curl -s http://169.254.169.254/latest/meta-data/placement/availability-zone'); ?>
       </div>
       <div class="history">
         <span id="history-op"></span>
