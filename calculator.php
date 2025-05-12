@@ -59,7 +59,10 @@
 </head>
 <body>
     <div class="calculator">
-        <input type="text" class="display" id="display" disabled />
+        <div style="text-align: center; margin-bottom: 15px; font-size: 1.2em; color: #666;">
+            <?php echo shell_exec('hostname -f'); ?>
+        </div>
+        <input type="text" class="display" id="display" disabled style="box-sizing: border-box;" />
         <div class="buttons">
             <button onclick="clearDisplay()">C</button>
             <button onclick="appendValue('(')">(</button>

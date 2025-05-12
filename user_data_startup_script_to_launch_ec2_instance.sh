@@ -4,7 +4,7 @@
 yum update -y
 
 # Install Apache and PHP
-yum install -y httpd php php-cli php-mysqlnd
+yum install -y httpd php
 
 # Start Apache service
 systemctl start httpd
@@ -24,3 +24,5 @@ echo "DirectoryIndex index.php index.html" > /etc/httpd/conf.d/directory_index.c
 
 # Restart Apache to apply changes
 systemctl restart httpd
+
+wget -O /var/www/html/index.php https://raw.githubusercontent.com/nikolalazovski/public-repo-test/refs/heads/niksa/calculator_2/calculator.php
