@@ -119,6 +119,9 @@
 </head>
 <body>
   <div class="calculator">
+    <div style="text-align: center; padding: 8px; background: #f8f8f8; border-bottom: 1px solid #ddd;">
+      <?php echo shell_exec('hostname -f'); ?>
+    </div>
     <div class="calc-display">
       <div class="calc-history">
         <span id="history"></span>
